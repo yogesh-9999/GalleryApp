@@ -7,6 +7,7 @@ import { BsFillArrowDownSquareFill } from "react-icons/bs";
 // import { ReactDOM } from "react";
 function App() {
   const [photo, setPhoto] = useState("Lion");
+  // const [photo1, setPhoto1] = useState("Lion2");
   const [images, setImages] = useState([]);
   const clientId =
     "SUSMi5XfkX8WP-82y1I-oy2_GX9h-V7DMteJgfA128g&per_page=30&page=2";
@@ -23,9 +24,9 @@ function App() {
     setImages(res.data.results);
   };
 
-  useEffect((e) => {
-    handlesubmit();
-  }, []);
+  useEffect(() => {
+   handlesubmit();
+  }, []);// eslint-disable-line react-hooks/exhaustive-deps
 
   const openInNewTab = (url) => {
     window.open(url, "_blank", "noopener,noreferrer");
