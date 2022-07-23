@@ -1,44 +1,145 @@
-img{
-    width:300px;
-    height:300px;
-    /* overflow:auto; */
+
+
+.Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
 }
+
+ .heading{
+    width: 50%;
+    text-align: center;
+    /* padding-bottom: 50px; */
+    align-items: center;
+    margin: 6vh;
+  }
+  .heading h3{
+    font-size: 3em;
+    font-weight: bolder;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #222;
+  }
+  
+ .heading h3 span{
+    font-weight: 100;
+  }
+
+
 button{
     margin: 1px;
+    
 }
-.photos{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    /* justify-content: center; */
-}
+
 form{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 4vh;
 }
-form input{
-    width: 50%;
-    /* padding: 5px 0px; */
-    margin: auto;
+input{
+    width: 25vw;
+    /* height: 2.5rem; */
+  padding-left: 5px;
+    border-radius:15px 0px 0px 15px;
+    outline: none;
+    border: 2px solid grey;
+    font-size: 1.2rem;
+    padding: 0.3rem 0.5rem;
+    text-align: left;
 }
+input:focus{
+  border:2px solid rgb(227, 143, 143);
+}
+
+
 button{
     margin: 0px!important;
+    font-size: 1.2rem;
+    padding: 0.3rem 0.4rem;
+    text-align: center;
+    border-radius: 0px  15px 15px 0px;
+ 
 }
-input[placeholder="Search"]{
-    margin: 0px!important;
+
+
+.photos{
+    
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    overflow: hidden!important;
 }
 .image-container{
     position: relative;
-    margin:0px;
-    padding: 0px;
+  
+    width:22rem;
+    height: 15rem;
+    margin:1vh 1vw;
+    border-radius: 0.2rem;
+    overflow: hidden!important;
 }
+
+.image-container img{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.2rem;
+    transition: 1s all ease-in-out;
+    overflow: hidden;
+   
+}
+
+img:hover{
+    opacity:0.6;
+    transform: scale(1.2);
+    overflow: hidden;
+
+}
+
 
 .downloadBtn{
     position: absolute;
-    top: calc(1.5rem + 251px);
-    left: calc(1.5rem + 251px);
+    right: 0;
+  bottom: 0;
     z-index: 5;
     font-size: 25px;
     cursor: pointer;
+    background-color: aliceblue;
+    border: 10px;
 }
+footer{
+    width: 100%;
+    height: 20vh;
+background-color: grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin:3vh 0vw 0vh 0vw;
+}
+footer h5{
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 500px) {
+    footer h5{
+      font-size: 1rem!important;
+    }
+    footer {
+        font-size: 1rem!important;
+    }
+  }
